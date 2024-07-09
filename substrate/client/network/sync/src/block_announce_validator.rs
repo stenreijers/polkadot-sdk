@@ -37,12 +37,12 @@ use std::{
 ///
 /// If the queue reaches the maximum, we drop any new block
 /// announcements.
-const MAX_CONCURRENT_BLOCK_ANNOUNCE_VALIDATIONS: usize = 256;
+const MAX_CONCURRENT_BLOCK_ANNOUNCE_VALIDATIONS: usize = 10000;
 
 /// Maximum number of concurrent block announce validations per peer.
 ///
 /// See [`MAX_CONCURRENT_BLOCK_ANNOUNCE_VALIDATIONS`] for more information.
-const MAX_CONCURRENT_BLOCK_ANNOUNCE_VALIDATIONS_PER_PEER: usize = 4;
+const MAX_CONCURRENT_BLOCK_ANNOUNCE_VALIDATIONS_PER_PEER: usize = 1000;
 
 /// Item that yields [`Stream`] implementation of [`BlockAnnounceValidator`].
 #[derive(Debug, Clone, PartialEq, Eq)]
